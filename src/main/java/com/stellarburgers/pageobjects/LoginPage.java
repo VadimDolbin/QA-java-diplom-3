@@ -2,6 +2,7 @@ package com.stellarburgers.pageobjects;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -25,6 +26,7 @@ public class LoginPage {
     @FindBy(how = How.XPATH, using = "//h2[text() = 'Вход']")
     private SelenideElement loginLabel;
 
+    @Step("Set value for 'Email' field")
     public void setEmail(String email) {
         emailField.shouldBe(Condition.visible).click();
         emailField.shouldBe(Condition.visible).sendKeys(Keys.CONTROL + "a");
@@ -32,6 +34,7 @@ public class LoginPage {
         emailField.shouldBe(Condition.visible).setValue(email);
     }
 
+    @Step("Set value for 'Password' field")
     public void setPassword(String password) {
         passwordField.shouldBe(Condition.visible).click();
         passwordField.shouldBe(Condition.visible).sendKeys(Keys.CONTROL + "a");
@@ -39,18 +42,22 @@ public class LoginPage {
         passwordField.shouldBe(Condition.visible).setValue(password);
     }
 
+    @Step("Click on 'Register' link")
     public void clickRegisterLink() {
         registerLink.shouldBe(Condition.visible).click();
     }
 
+    @Step("Click on 'Forgot password' link")
     public void clickForgotPasswordLink() {
         forgotPasswordLink.shouldBe(Condition.visible).click();
     }
 
+    @Step("Click on 'Login' button")
     public void clickLoginButton() {
         loginButton.shouldBe(Condition.visible).click();
     }
 
+    @Step("Check that 'Login label' is displayed")
     public boolean isLoginLabelDisplayed() {
         return loginLabel.shouldBe(Condition.visible).isDisplayed();
     }

@@ -1,6 +1,5 @@
 package com.stellarburgers.tests;
 
-import com.UserOperations;
 import com.codeborne.selenide.WebDriverRunner;
 import com.github.javafaker.Faker;
 import com.stellarburgers.pageobjects.LoginPage;
@@ -68,7 +67,7 @@ public class RegistrationTest {
         loginPage.setEmail(email);
         loginPage.setPassword(password);
         loginPage.clickLoginButton();
-        assertTrue(mainPage.isPlaceOrderButtonDisplayed());
+        assertTrue("'Place order' button is not displayed on Main page", mainPage.isPlaceOrderButtonDisplayed());
     }
 
     @Test
@@ -85,6 +84,6 @@ public class RegistrationTest {
         registrationPage.setEmail(email);
         registrationPage.setPassword(password);
         registrationPage.clickRegisterButton();
-        assertTrue(registrationPage.isIncorrectPasswordLabelDisplayed());
+        assertTrue("'Incorrect password' label is not displayed on Registration page", registrationPage.isIncorrectPasswordLabelDisplayed());
     }
 }

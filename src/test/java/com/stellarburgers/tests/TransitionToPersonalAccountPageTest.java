@@ -59,6 +59,6 @@ public class TransitionToPersonalAccountPageTest {
         loginPage.setPassword(responseData.get("password"));
         loginPage.clickLoginButton();
         mainPage.clickPersonalAccountButton();
-        assertTrue(personalAccountPage.isUserProfileLinkDisplayed());
+        assertTrue("'User profile' link is not displayed on Personal Account page", personalAccountPage.isUserProfileLinkDisplayed());
     }
 }

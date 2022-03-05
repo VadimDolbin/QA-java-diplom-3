@@ -62,6 +62,6 @@ public class LogoutTest {
         loginPage.clickLoginButton();
         mainPage.clickPersonalAccountButton();
         personalAccountPage.clickLogoutButton();
-        assertTrue(loginPage.isLoginLabelDisplayed());
+        assertTrue("'Login' label is not displayed on Login page", loginPage.isLoginLabelDisplayed());
     }
 }

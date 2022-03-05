@@ -61,7 +61,7 @@ public class LoginTest {
         loginPage.setEmail(responseData.get("email"));
         loginPage.setPassword(responseData.get("password"));
         loginPage.clickLoginButton();
-        assertTrue(mainPage.isPlaceOrderButtonDisplayed());
+        assertTrue("'Place order' button is not displayed on Main page", mainPage.isPlaceOrderButtonDisplayed());
     }
 
     @Test
@@ -72,7 +72,7 @@ public class LoginTest {
         loginPage.setEmail(responseData.get("email"));
         loginPage.setPassword(responseData.get("password"));
         loginPage.clickLoginButton();
-        assertTrue(mainPage.isPlaceOrderButtonDisplayed());
+        assertTrue("'Place order' button is not displayed on Main page", mainPage.isPlaceOrderButtonDisplayed());
     }
 
     @Test
@@ -85,7 +85,7 @@ public class LoginTest {
         loginPage.setEmail(responseData.get("email"));
         loginPage.setPassword(responseData.get("password"));
         loginPage.clickLoginButton();
-        assertTrue(mainPage.isPlaceOrderButtonDisplayed());
+        assertTrue("'Place order' button is not displayed on Main page", mainPage.isPlaceOrderButtonDisplayed());
     }
 
     @Test
@@ -98,6 +98,6 @@ public class LoginTest {
         loginPage.setEmail(responseData.get("email"));
         loginPage.setPassword(responseData.get("password"));
         loginPage.clickLoginButton();
-        assertTrue(mainPage.isPlaceOrderButtonDisplayed());
+        assertTrue("'Place order' button is not displayed on Main page", mainPage.isPlaceOrderButtonDisplayed());
     }
 }

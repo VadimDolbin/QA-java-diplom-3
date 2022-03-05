@@ -62,7 +62,7 @@ public class TransitionToMainPageTest {
         loginPage.clickLoginButton();
         mainPage.clickPersonalAccountButton();
         personalAccountPage.clickConstructorButton();
-        assertTrue(mainPage.isPlaceOrderButtonDisplayed());
+        assertTrue("'Place order' button is not displayed on Main page", mainPage.isPlaceOrderButtonDisplayed());
     }
 
     @Test
@@ -75,6 +75,6 @@ public class TransitionToMainPageTest {
         loginPage.clickLoginButton();
         mainPage.clickPersonalAccountButton();
         personalAccountPage.clickStellarBurgersIcon();
-        assertTrue(mainPage.isPlaceOrderButtonDisplayed());
+        assertTrue("'Place order' button is not displayed on Main page", mainPage.isPlaceOrderButtonDisplayed());
     }
 }

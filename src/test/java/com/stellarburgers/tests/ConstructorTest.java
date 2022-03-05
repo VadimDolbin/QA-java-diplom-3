@@ -60,7 +60,7 @@ public class ConstructorTest {
         loginPage.clickLoginButton();
         mainPage.clickFillingsButton();
         mainPage.clickBunsButton();
-        assertTrue(mainPage.isBunsHeaderDisplayed());
+        assertTrue("'Buns' header is not displayed on Main page",mainPage.isBunsHeaderDisplayed());
     }
 
     @Test
@@ -72,7 +72,7 @@ public class ConstructorTest {
         loginPage.setPassword(responseData.get("password"));
         loginPage.clickLoginButton();
         mainPage.clickSaucesButton();
-        assertTrue(mainPage.isSaucesHeaderDisplayed());
+        assertTrue("'Sauces' header is not displayed on Main page", mainPage.isSaucesHeaderDisplayed());
     }
 
     @Test
@@ -84,6 +84,6 @@ public class ConstructorTest {
         loginPage.setPassword(responseData.get("password"));
         loginPage.clickLoginButton();
         mainPage.clickFillingsButton();
-        assertTrue(mainPage.isFillingsHeaderDisplayed());
+        assertTrue("'Fillings' header is not displayed on Main page", mainPage.isFillingsHeaderDisplayed());
     }
 }
